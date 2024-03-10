@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2D3250;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.resource-card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #7077A1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+    color: #555;
+}
+
+.resource {
+    margin-top: 15px;
+}
+
+/* Select Styles */
+#disorder-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Option Styles */
+#disorder-select option {
+    background-color: #F3CCF3;
+    color: #333;
+    font-size: 16px;
+}
+
+#disorder-select option:hover {
+    background-color: #f5f5f5;
+}
+
+.inhaling-image, .exhaling-image {
+    margin-top: 230px; /* Adjust margin-top as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 3s ease;
+    margin-left: 40%; /* Adjust margin-left as needed */
+}
+
+.inhaling-image {
+    animation: fadeInFirst 8s ease infinite alternate;
+}
+
+.exhaling-image {
+    animation: fadeInSecond 8s ease infinite alternate;
+}
+
+@keyframes fadeInFirst {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeInSecond {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

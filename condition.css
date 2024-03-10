@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #40679E;
+    color: #fff;
+    padding: 10px 0;
+    height:620vh;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: #40679E;
+    display: flex;
+    justify-content: space-between; /* Adjust to flex-start */
+    align-items: center;
+}
+
+.navbar h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Move "Soul-Sync" to the left */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+    margin:70px;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+}
+
+.container2 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    height: 100vh;
+    max-width: 2000vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top:60px;
+}
+
+.container2 .card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #FFCAD4; 
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.container2 .card:hover {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #1B3C73; 
+    box-shadow:0 15px 35px rgba(0, 0, 0, 0.9);
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.container2 .card .content2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.container2 .card:hover .content2 {
+    transform: translateY(-20px);
+}
+
+.container2 .card .content2 .imgBx {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 20px; 
+}
+
+.container2 .card .content2 .contentBx a {
+    color: Black; 
+    text-decoration: none;
+    margin-top: 20px; 
+}
+
+.container2 .card .content2 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container2 .card .content2 .contentBx h3 {
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+
+.container2 .card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+}
+
+.container2 .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container2 .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container2 .card .sci li p {
+    color: black;
+    font-size: 15px;
+}
+

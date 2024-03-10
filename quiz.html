@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Quizzes</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Quizzes</h1>
+        <h3>Currently the quiz is only available upto hoarding disorder</h3>
+        <ul class="quiz-links">
+                <li><a href="#adjustment-disorder" onclick="showQuiz('adjustment-disorder')">Adjustment Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#alcohol-related-disorders" onclick="showQuiz('alcohol-related-disorders')">Alcohol-Related Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#anxiety-disorders" onclick="showQuiz('anxiety-disorders')">Anxiety Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#adhd" onclick="showQuiz('adhd')">Attention-Deficit/Hyperactivity Disorder (ADHD) Self-Assessment Quiz</a></li>
+                <li><a href="#autism-spectrum" onclick="showQuiz('autism-spectrum')">Autism Spectrum Disorders (ASD) Self-Assessment Quiz</a></li>
+                <li><a href="#bipolar-disorders" onclick="showQuiz('bipolar-disorders')">Bipolar Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#body-dysmorphic-disorder" onclick="showQuiz('body-dysmorphic-disorder')">Body Dysmorphic Disorder (BDD) Self-Assessment Quiz</a></li>
+                <li><a href="#borderline-personality-disorder" onclick="showQuiz('borderline-personality-disorder')">Borderline Personality Disorder (BPD) Self-Assessment Quiz</a></li>
+                <li><a href="#conduct-disorders" onclick="showQuiz('conduct-disorders')">Conduct Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#depressive-disorders" onclick="showQuiz('depressive-disorders')">Depressive Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#disruptive-impulse-control" onclick="showQuiz('disruptive-impulse-control')">Disruptive, Impulse-Control, and Conduct Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#dissociative-disorders" onclick="showQuiz('dissociative-disorders')">Dissociative Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#elimination-disorders" onclick="showQuiz('elimination-disorders')">Elimination Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#feeding-and-eating-disorders" onclick="showQuiz('feeding-and-eating-disorders')">Feeding and Eating Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#gender-dysphoria" onclick="showQuiz('gender-dysphoria')">Gender Dysphoria Self-Assessment Quiz</a></li>
+                <li><a href="#hoarding-disorder" onclick="showQuiz('hoarding-disorder')">Hoarding Disorder Self-Assessment Quiz</a></li>
+                <li><a href="#intellectual-developmental-disorder" onclick="showQuiz('intellectual-developmental-disorder')">Intellectual Developmental Disorder Self-Assessment Quiz</a></li>
+                <li><a href="#medical-conditions-mental-health-symptoms" onclick="showQuiz('medical-conditions-mental-health-symptoms')">Medical Conditions with Mental Health Symptoms Self-Assessment Quiz</a></li>
+                <li><a href="#medication-induced-movement-disorders" onclick="showQuiz('medication-induced-movement-disorders')">Medication-Induced Movement Disorders and Other Adverse Effects of Medication Self-Assessment Quiz</a></li>
+                <li><a href="#neurocognitive-disorders" onclick="showQuiz('neurocognitive-disorders')">Neurocognitive Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#neurodevelopmental-disorders" onclick="showQuiz('neurodevelopmental-disorders')">Neurodevelopmental Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#obsessive-compulsive-related-disorders" onclick="showQuiz('obsessive-compulsive-related-disorders')">Obsessive-Compulsive and Related Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#paraphilic-disorders" onclick="showQuiz('paraphilic-disorders')">Paraphilic Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#personality-disorders" onclick="showQuiz('personality-disorders')">Personality Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#posttraumatic-stress-disorder" onclick="showQuiz('posttraumatic-stress-disorder')">Posttraumatic Stress Disorder (PTSD) Self-Assessment Quiz</a></li>
+                <li><a href="#schizophrenia-spectrum-psychotic-disorders" onclick="showQuiz('schizophrenia-spectrum-psychotic-disorders')">Schizophrenia Spectrum and Other Psychotic Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#sexual-dysfunctions" onclick="showQuiz('sexual-dysfunctions')">Sexual Dysfunctions Self-Assessment Quiz</a></li>
+                <li><a href="#sleep-wake-disorders" onclick="showQuiz('sleep-wake-disorders')">Sleep-Wake Disorders Self-Assessment Quiz</a></li>
+                <li><a href="#somatic-symptom-and-related-disorders" onclick="showQuiz('somatic-symptom-and-related-disorders')">Somatic Symptom and Related Disorders - Excessive concern over physical symptoms affecting functioning.</a></li>
+                <li><a href="#specific-learning-disorder" onclick="showQuiz('specific-learning-disorder')">Specific Learning Disorder - Difficulty with academic skills despite normal intelligence.</a></li>
+                <li><a href="#substance-related-and-addictive-disorders" onclick="showQuiz('substance-related-and-addictive-disorders')">Substance-Related and Addictive Disorders - Problematic substance use causing distress or impairment.</a></li>
+                <li><a href="#suicidal-behavior-disorder" onclick="showQuiz('suicidal-behavior-disorder')">Suicidal Behavior Disorder - Self-harming behaviors or suicide attempts due to distress.</a></li>
+                <li><a href="#tic-disorders" onclick="showQuiz('tic-disorders')">Tic Disorders - Involuntary repetitive movements or vocalizations.</a></li>
+                <li><a href="#trauma-and-stressor-related-disorders" onclick="showQuiz('trauma-and-stressor-related-disorders')">Trauma- and Stressor-Related Disorders - Conditions triggered by traumatic or stressful events.</a></li>
+                
+        </ul>
+        
+        
+    <div id="adjustment-disorder" class="quiz" style="display:none">
+        <h2>Adjustment Disorder Self-Assessment Quiz</h2>
+        <div class="questions">
+            <div class="question">
+                <p>1. How often do you feel overwhelmed by everyday tasks or responsibilities?</p>
+                <select id="q1">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>2. How frequently do you experience difficulty sleeping or changes in your sleeping patterns?</p>
+                <select id="q2">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>3. How often do you feel irritable or on edge?</p>
+                <select id="q3">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>4. How frequently do you experience changes in appetite or weight?</p>
+                <select id="q4">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>5. How often do you feel disconnected or estranged from others?</p>
+                <select id="q5">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>6. How frequently do you experience feelings of sadness, hopelessness, or despair?</p>
+                <select id="q6">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>7. How often do you find it challenging to concentrate or make decisions?</p>
+                <select id="q7">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>8. How frequently do you engage in avoidant behaviors, such as avoiding social situations or responsibilities?</p>
+                <select id="q8">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>9. How often do you experience physical symptoms, such as headaches or stomachaches, without medical explanation?</p>
+                <select id="q9">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>10. How frequently do you feel overwhelmed by changes in your life or circumstances?</p>
+                <select id="q10">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Often</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+        </div>
+        <button class="submit-btn" onclick="analyzeAdjustmentDisorder()">Submit</button>
+        <p id="adjustment-disorder-result"></p>
+    </div>
+
+    <div id="alcohol-related-disorders" class="quiz" style="display:none">
+        <h2>Alcohol-Related Disorder Self-Assessment Quiz</h2>
+        <div class="questions">
+            <div class="question">
+                <p>1. How often do you consume alcohol?</p>
+                <select id="q1">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Occasionally</option>
+                    <option value="3">Frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>2. How many drinks do you typically consume per drinking session?</p>
+                <select id="q2">
+                    <option value="0">None</option>
+                    <option value="1">1-2 drinks</option>
+                    <option value="2">3-4 drinks</option>
+                    <option value="3">5 or more drinks</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>3. How often do you experience blackouts or memory lapses after drinking?</p>
+                <select id="q3">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Occasionally</option>
+                    <option value="3">Frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>4. Have you ever felt guilty or ashamed about your drinking habits?</p>
+                <select id="q4">
+                    <option value="0">No</option>
+                    <option value="1">Yes, occasionally</option>
+                    <option value="2">Yes, often</option>
+                    <option value="3">Yes, frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>5. How often do you drink to cope with stress or emotional problems?</p>
+                <select id="q5">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Occasionally</option>
+                    <option value="3">Frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>6. Have you ever experienced withdrawal symptoms when attempting to quit or cut down on drinking?</p>
+                <select id="q6">
+                    <option value="0">No</option>
+                    <option value="1">Yes, mild symptoms</option>
+                    <option value="2">Yes, moderate symptoms</option>
+                    <option value="3">Yes, severe symptoms</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>7. How often do you neglect responsibilities at work, school, or home due to drinking?</p>
+                <select id="q7">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Occasionally</option>
+                    <option value="3">Frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>8. Have you ever been involved in risky or dangerous situations while drinking?</p>
+                <select id="q8">
+                    <option value="0">No</option>
+                    <option value="1">Yes, occasionally</option>
+                    <option value="2">Yes, often</option>
+                    <option value="3">Yes, frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>9. How often do you find yourself unable to stop drinking once you start?</p>
+                <select id="q9">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Occasionally</option>
+                    <option value="3">Frequently</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>10. Have you ever tried to cut down or control your drinking?</p>
+                <select id="q10">
+                    <option value="0">No</option>
+                    <option value="1">Yes, once or twice</option>
+                    <option value="2">Yes, multiple times</option>
+                    <option value="3">Yes, but unsuccessfully</option>
+                </select>
+            </div>
+        </div>
+        <button class="submit-btn" onclick="analyzeAlcoholRelatedDisorder()">Submit</button>
+        <p id="alcohol-related-disorder-result"></p>
+    </div>
+    
+    <div id="anxiety-disorders" class="quiz" style="display:none">
+        <h2>Anxiety Disorder Self-Assessment Quiz</h2>
+        <div class="questions">
+            <div class="question">
+                <p>1. How often do you feel excessive worry or fear?</p>
+                <select id="q1">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>2. How often do you experience restlessness or difficulty relaxing?</p>
+                <select id="q2">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>3. How often do you have trouble concentrating due to anxiety?</p>
+                <select id="q3">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>4. How frequently do you experience irritability?</p>
+                <select id="q4">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>5. How often do you experience physical symptoms of anxiety, such as sweating, trembling, or rapid heartbeat?</p>
+                <select id="q5">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>6. How frequently do you avoid situations or activities due to anxiety?</p>
+                <select id="q6">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>7. How often do you experience panic attacks?</p>
+                <select id="q7">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>8. How frequently do you have trouble sleeping due to anxiety?</p>
+                <select id="q8">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>9. How often do you experience intrusive thoughts or worries?</p>
+                <select id="q9">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+            <div class="question">
+                <p>10. How frequently do you feel tense or on edge?</p>
+                <select id="q10">
+                    <option value="0">Never</option>
+                    <option value="1">Occasionally</option>
+                    <option value="2">Frequently</option>
+                    <option value="3">Almost always</option>
+                </select>
+            </div>
+        </div>
+        <button class="submit-btn" onclick="analyzeAnxietyDisorder()">Submit</button>
+        <p id="anxiety-disorder-result"></p>
+    </div>
+    
+
+        <div id="adhd" class="quiz" style="display:none">
+            <h2>ADHD Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. How often do you find it difficult to focus on tasks or activities that require sustained attention, such as work or school assignments?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How frequently do you have trouble organizing tasks and activities?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. How often do you avoid or delay starting tasks that require a lot of thought?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. How frequently do you lose things necessary for tasks or activities?</p>
+                    <select id="q4">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. How often do you become easily distracted by unrelated thoughts or stimuli?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. How frequently do you forget to do routine daily activities, such as paying bills or running errands?</p>
+                    <select id="q6">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. How often do you find it difficult to follow through on instructions or complete tasks in your work or personal life?</p>
+                    <select id="q7">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. How frequently do you interrupt others or intrude on their conversations or activities?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. How often do you feel restless or find it difficult to sit still in situations where it is expected?</p>
+                    <select id="q9">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How frequently do you engage in activities that are excessively risky or have a high potential for negative consequences?</p>
+                    <select id="q10">
+                        <option value="0">Never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeADHD()">Submit</button>
+            <p id="adhd-result"></p>
+        </div>
+        
+        <div id="autism-spectrum" class="quiz" style="display:none">
+            <h2>Autism Spectrum Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you often find it challenging to maintain eye contact during conversations?</p>
+                    <select id="q1">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How comfortable are you in social situations, especially with new people?</p>
+                    <select id="q2">
+                        <option value="0">Very comfortable</option>
+                        <option value="1">Somewhat comfortable</option>
+                        <option value="2">Somewhat uncomfortable</option>
+                        <option value="3">Very uncomfortable</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Do you have specific routines or rituals that you follow strictly?</p>
+                    <select id="q3">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. How do you feel about changes in your daily routine or environment?</p>
+                    <select id="q4">
+                        <option value="0">Comfortable</option>
+                        <option value="1">Neutral</option>
+                        <option value="2">Uncomfortable</option>
+                        <option value="3">Very uncomfortable</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Do you often engage in repetitive behaviors, such as hand-flapping or rocking?</p>
+                    <select id="q5">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. How do you typically respond to sensory stimuli, such as loud noises or bright lights?</p>
+                    <select id="q6">
+                        <option value="0">No sensitivity</option>
+                        <option value="1">Mild sensitivity</option>
+                        <option value="2">Moderate sensitivity</option>
+                        <option value="3">Severe sensitivity</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. How do you feel about changes in your daily routine or environment?</p>
+                    <select id="q7">
+                        <option value="0">Comfortable</option>
+                        <option value="1">Neutral</option>
+                        <option value="2">Uncomfortable</option>
+                        <option value="3">Very uncomfortable</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Do you have difficulty understanding social cues or non-verbal communication?</p>
+                    <select id="q8">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. How do you feel about changes in your daily routine or environment?</p>
+                    <select id="q9">
+                        <option value="0">Comfortable</option>
+                        <option value="1">Neutral</option>
+                        <option value="2">Uncomfortable</option>
+                        <option value="3">Very uncomfortable</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How do you typically respond to changes in plans or unexpected events?</p>
+                    <select id="q10">
+                        <option value="0">Adapt easily</option>
+                        <option value="1">Adapt with difficulty</option>
+                        <option value="2">Struggle to adapt</option>
+                        <option value="3">Unable to adapt</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeAutismSpectrum()">Submit</button>
+            <p id="autism-spectrum-result"></p>
+        </div>
+        
+        <div id="bipolar-disorders" class="quiz" style="display:none">
+            <h2>Bipolar Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Have you experienced periods of unusually elevated mood or energy, often referred to as manic episodes?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. Have you ever experienced periods of unusually low mood, known as depressive episodes?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. How often do you experience abrupt changes in mood and energy levels?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. Have these mood swings significantly affected your ability to function at work, school, or in relationships?</p>
+                    <select id="q4">
+                        <option value="0">Not at all</option>
+                        <option value="1">Slightly</option>
+                        <option value="2">Moderately</option>
+                        <option value="3">Severely</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Have you engaged in impulsive or risky behaviors during manic episodes?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. Do you experience changes in your sleep patterns during mood episodes?</p>
+                    <select id="q6">
+                        <option value="0">No</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Have you experienced changes in appetite or weight during depressive or manic episodes?</p>
+                    <select id="q7">
+                        <option value="0">No</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Have you ever experienced hallucinations or delusions during mood episodes?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. How do you feel about seeking help or treatment for your mood swings?</p>
+                    <select id="q9">
+                        <option value="0">Open to it</option>
+                        <option value="1">Neutral</option>
+                        <option value="2">Resistant</option>
+                        <option value="3">Avoidant</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How do you cope with stress and major life changes?</p>
+                    <select id="q10">
+                        <option value="0">Effectively</option>
+                        <option value="1">Somewhat effectively</option>
+                        <option value="2">Ineffectively</option>
+                        <option value="3">Not coping well</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeBipolarDisorder()">Submit</button>
+            <p id="bipolar-disorder-result"></p>
+        </div>
+
+        <div id="body-dysmorphic-disorder" class="quiz" style="display:none">
+            <h2>Body Dysmorphic Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you find yourself preoccupied with one or more perceived flaws or defects in your physical appearance?</p>
+                    <select id="q1">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How much time do you spend thinking about these perceived flaws each day?</p>
+                    <select id="q2">
+                        <option value="0">None</option>
+                        <option value="1">Less than an hour</option>
+                        <option value="2">1-3 hours</option>
+                        <option value="3">More than 3 hours</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. How much distress or impairment do these perceived flaws cause in your daily life?</p>
+                    <select id="q3">
+                        <option value="0">None</option>
+                        <option value="1">Mild</option>
+                        <option value="2">Moderate</option>
+                        <option value="3">Severe</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. Have you ever sought reassurance about your appearance from others?</p>
+                    <select id="q4">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. How often do you compare your appearance to others, especially in a negative light?</p>
+                    <select id="q5">
+                        <option value="0">Rarely or never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. Do these concerns about your appearance significantly interfere with your social life or relationships?</p>
+                    <select id="q6">
+                        <option value="0">No interference</option>
+                        <option value="1">Mild interference</option>
+                        <option value="2">Moderate interference</option>
+                        <option value="3">Severe interference</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Have you ever undergone cosmetic procedures or surgeries to fix perceived flaws?</p>
+                    <select id="q7">
+                        <option value="0">No</option>
+                        <option value="1">Once</option>
+                        <option value="2">Multiple times</option>
+                        <option value="3">Considering it</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. How would you rate your overall satisfaction with your physical appearance?</p>
+                    <select id="q8">
+                        <option value="0">Satisfied</option>
+                        <option value="1">Somewhat satisfied</option>
+                        <option value="2">Neutral</option>
+                        <option value="3">Dissatisfied</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Do you find yourself avoiding mirrors or reflective surfaces due to concerns about your appearance?</p>
+                    <select id="q9">
+                        <option value="0">No</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Often</option>
+                        <option value="3">Very often</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. Have these concerns ever caused you to miss school, work, or other important activities?</p>
+                    <select id="q10">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeBodyDysmorphicDisorder()">Submit</button>
+            <p id="body-dysmorphic-disorder-result"></p>
+        </div>
+
+        <div id="borderline-personality-disorder" class="quiz" style="display:none">
+            <h2>Borderline Personality Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you have intense and unstable relationships, often marked by idealization and devaluation?</p>
+                    <select id="q1">
+                        <option value="0">No, not at all</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Often</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How often do you experience rapid mood swings, often lasting a few hours to a day?</p>
+                    <select id="q2">
+                        <option value="0">Rarely or never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Frequently</option>
+                        <option value="3">Almost daily</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Do you often engage in impulsive behaviors such as substance abuse, reckless driving, or binge eating?</p>
+                    <select id="q3">
+                        <option value="0">No, never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. How often do you experience chronic feelings of emptiness or boredom?</p>
+                    <select id="q4">
+                        <option value="0">Rarely or never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Frequently</option>
+                        <option value="3">Almost daily</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Have you experienced recurrent suicidal thoughts or self-harming behaviors?</p>
+                    <select id="q5">
+                        <option value="0">No, never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. How do you react to perceived abandonment, even if it's not real?</p>
+                    <select id="q6">
+                        <option value="0">No reaction</option>
+                        <option value="1">Minor distress</option>
+                        <option value="2">Moderate distress</option>
+                        <option value="3">Severe distress</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Do you experience identity disturbances or uncertainty about your self-image, goals, or career choices?</p>
+                    <select id="q7">
+                        <option value="0">No, not at all</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Frequently</option>
+                        <option value="3">Almost always</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. How often do you experience intense and inappropriate anger, often followed by shame or guilt?</p>
+                    <select id="q8">
+                        <option value="0">Rarely or never</option>
+                        <option value="1">Occasionally</option>
+                        <option value="2">Frequently</option>
+                        <option value="3">Almost daily</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Do you have transient, stress-related paranoid thoughts or dissociative symptoms?</p>
+                    <select id="q9">
+                        <option value="0">No, never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How do you cope with emotional stress or interpersonal conflicts?</p>
+                    <select id="q10">
+                        <option value="0">Effectively</option>
+                        <option value="1">Somewhat effectively</option>
+                        <option value="2">Ineffectively</option>
+                        <option value="3">Not coping well</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeBorderlinePersonalityDisorder()">Submit</button>
+            <p id="borderline-personality-disorder-result"></p>
+        </div>
+        
+        
+        <div id="conduct-disorders" class="quiz" style="display:none">
+            <h2>Conduct Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you often violate societal norms and rules?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. Have you been involved in physical fights or assaults?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Do you often lie or deceive others for personal gain or pleasure?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. Have you shown aggression towards people or animals?</p>
+                    <select id="q4">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Do you often engage in theft or property destruction?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. Do you have a tendency to disregard the safety of yourself and others?</p>
+                    <select id="q6">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Have you been involved in setting fires intentionally?</p>
+                    <select id="q7">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Do you often skip school or run away from home?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Have you engaged in vandalism or destruction of property?</p>
+                    <select id="q9">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. Do you often bully, intimidate, or coerce others?</p>
+                    <select id="q10">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeConductDisorder()">Submit</button>
+            <p id="conduct-disorder-result"></p>
+        </div>
+
+        <div id="depressive-disorders" class="quiz" style="display:none">
+            <h2>Depressive Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Over the past two weeks, how often have you felt little interest or pleasure in doing things?</p>
+                    <select id="q1">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How often have you felt down, depressed, or hopeless over the past two weeks?</p>
+                    <select id="q2">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Have you had trouble falling asleep, staying asleep, or sleeping too much in the past two weeks?</p>
+                    <select id="q3">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. How often have you felt tired or had little energy in the past two weeks?</p>
+                    <select id="q4">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Have you experienced a significant increase or decrease in appetite or weight change in the past two weeks?</p>
+                    <select id="q5">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. How often have you felt bad about yourself or that you are a failure or have let yourself or your family down in the past two weeks?</p>
+                    <select id="q6">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Have you had trouble concentrating on things such as reading, watching TV, or talking to others in the past two weeks?</p>
+                    <select id="q7">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. How often have you had thoughts that you would be better off dead or of hurting yourself in the past two weeks?</p>
+                    <select id="q8">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Have you experienced physical symptoms such as aches, pains, headaches, or stomach problems without a clear cause in the past two weeks?</p>
+                    <select id="q9">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How often have you felt anxious, worried, or on edge in the past two weeks?</p>
+                    <select id="q10">
+                        <option value="0">Not at all</option>
+                        <option value="1">Several days</option>
+                        <option value="2">More than half the days</option>
+                        <option value="3">Nearly every day</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeDepressiveDisorder()">Submit</button>
+            <p id="depressive-disorder-result"></p>
+        </div>
+
+        <div id="disruptive-impulse-control" class="quiz" style="display:none">
+            <h2>Disruptive, Impulse-Control, and Conduct Disorders Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you often find it difficult to control your temper?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. Have you ever been physically aggressive towards others (e.g., hitting, pushing, or punching)?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Do you often break rules, defy authority, or refuse to comply with requests or directions?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. Have you engaged in behaviors that deliberately destroy property or harm animals?</p>
+                    <select id="q4">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Do you often blame others for your mistakes or misbehavior?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. Have you stolen from people, such as breaking into their homes or taking their possessions?</p>
+                    <select id="q6">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Do you often initiate physical fights or arguments with others?</p>
+                    <select id="q7">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Have you been expelled from school or faced legal consequences due to your behavior?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Do you often engage in reckless or risky activities without considering the consequences?</p>
+                    <select id="q9">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. How often do you have difficulty maintaining friendships or relationships due to your behavior?</p>
+                    <select id="q10">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeDisruptiveDisorders()">Submit</button>
+            <p id="disruptive-disorders-result"></p>
+        </div>
+
+        <div id="dissociative-disorders" class="quiz" style="display:none">
+            <h2>Dissociative Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Have you ever experienced memory gaps or blackouts where you cannot recall important personal information?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. Do you often feel like you are watching yourself from outside your body, as if you're detached from your thoughts, feelings, or sensations?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Have you experienced identity confusion, where you feel uncertain about who you are or your sense of self?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. Do you often feel like you're in a dream-like state or that the world around you is unreal?</p>
+                    <select id="q4">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Have you experienced sudden and unexpected changes in mood, behavior, or identity?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. Have you ever felt like you were outside of your body during traumatic events?</p>
+                    <select id="q6">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Do you often experience amnesia, forgetting important personal information or events?</p>
+                    <select id="q7">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Have you ever felt like you were someone else or that you had different identities or personalities?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. Do you experience significant distress or problems in your daily life as a result of these experiences?</p>
+                    <select id="q9">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. Have others expressed concern or noticed changes in your behavior or memory?</p>
+                    <select id="q10">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="analyzeDissociativeDisorder()">Submit</button>
+            <p id="dissociative-disorder-result"></p>
+        </div>
+
+        <div id="feeding and eating disorders" class="quiz" style="display:none">
+            <h2>Feeding and Eating Disorder Self-Assessment Quiz</h2>
+            <div class="questions">
+                <div class="question">
+                    <p>1. Do you often experience intense fear of gaining weight or becoming fat?</p>
+                    <select id="q1">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>2. How often do you engage in behaviors aimed at preventing weight gain, such as restrictive dieting or excessive exercise?</p>
+                    <select id="q2">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>3. Do you often feel dissatisfied with your body shape or weight, regardless of actual size?</p>
+                    <select id="q3">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>4. How frequently do you experience episodes of binge eating, characterized by consuming large amounts of food in a short period?</p>
+                    <select id="q4">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>5. Do you often feel a lack of control over your eating behavior during binge episodes?</p>
+                    <select id="q5">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>6. How often do you engage in compensatory behaviors to prevent weight gain after binge eating, such as self-induced vomiting or misuse of laxatives?</p>
+                    <select id="q6">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>7. Have you experienced significant weight loss or failure to achieve expected weight gain, despite efforts to maintain or increase weight?</p>
+                    <select id="q7">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>8. Do you often experience a distorted body image, seeing yourself as overweight even when underweight?</p>
+                    <select id="q8">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>9. How often do you avoid eating certain foods or food groups due to fear of weight gain or perceived negative consequences?</p>
+                    <select id="q9">
+                        <option value="0">Never</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Frequently</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>10. Have you experienced disruptions in menstrual cycles as a result of abnormal eating behaviors?</p>
+                    <select id="q10">
+                        <option value="0">No</option>
+                        <option value="1">Rarely</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="submit-btn" onclick="analyzeGenderDysphoria()">Submit</button>
+                <p id="feedingandeating-disorder-result"></p>
+                </div>
+
+
+                        <div id="gender-dysphoria" class="quiz" style="display:none">
+                            <h2>Gender Dysphoria Self-Assessment Quiz</h2>
+                            <div class="questions">
+                                <div class="question">
+                                    <p>1. How comfortable do you feel with your assigned gender at birth?</p>
+                                    <select id="q1">
+                                        <option value="0">Completely comfortable</option>
+                                        <option value="1">Somewhat comfortable</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Uncomfortable</option>
+                                        <option value="4">Extremely uncomfortable</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>2. Have you ever felt a strong and persistent desire to be of another gender?</p>
+                                    <select id="q2">
+                                        <option value="0">Never</option>
+                                        <option value="1">Rarely</option>
+                                        <option value="2">Sometimes</option>
+                                        <option value="3">Often</option>
+                                        <option value="4">Always</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>3. How do you perceive yourself in terms of your gender identity?</p>
+                                    <select id="q3">
+                                        <option value="0">Completely aligned with assigned gender</option>
+                                        <option value="1">Somewhat aligned with assigned gender</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Somewhat aligned with desired gender</option>
+                                        <option value="4">Completely aligned with desired gender</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>4. Do you often experience distress related to your gender identity?</p>
+                                    <select id="q4">
+                                        <option value="0">Never</option>
+                                        <option value="1">Rarely</option>
+                                        <option value="2">Sometimes</option>
+                                        <option value="3">Often</option>
+                                        <option value="4">Always</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>5. How do you feel about your body in relation to your gender identity?</p>
+                                    <select id="q5">
+                                        <option value="0">Completely comfortable</option>
+                                        <option value="1">Somewhat comfortable</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Somewhat uncomfortable</option>
+                                        <option value="4">Completely uncomfortable</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>6. Have you taken any steps to change your physical appearance to align with your gender identity?</p>
+                                    <select id="q6">
+                                        <option value="0">No</option>
+                                        <option value="1">Considering</option>
+                                        <option value="2">In process</option>
+                                        <option value="3">Partially</option>
+                                        <option value="4">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>7. How supportive are your family and friends of your gender identity?</p>
+                                    <select id="q7">
+                                        <option value="0">Fully supportive</option>
+                                        <option value="1">Somewhat supportive</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Somewhat unsupportive</option>
+                                        <option value="4">Not supportive at all</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>8. Have you experienced discrimination or harassment due to your gender identity?</p>
+                                    <select id="q8">
+                                        <option value="0">Never</option>
+                                        <option value="1">Rarely</option>
+                                        <option value="2">Sometimes</option>
+                                        <option value="3">Often</option>
+                                        <option value="4">Always</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>9. How satisfied are you with the medical and mental health support available for gender transition?</p>
+                                    <select id="q9">
+                                        <option value="0">Completely satisfied</option>
+                                        <option value="1">Satisfied</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Dissatisfied</option>
+                                        <option value="4">Completely dissatisfied</option>
+                                    </select>
+                                </div>
+                                <div class="question">
+                                    <p>10. How hopeful are you about your future in terms of your gender identity?</p>
+                                    <select id="q10">
+                                        <option value="0">Very hopeful</option>
+                                        <option value="1">Hopeful</option>
+                                        <option value="2">Neutral</option>
+                                        <option value="3">Not very hopeful</option>
+                                        <option value="4">Hopeless</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="submit-btn" onclick="analyzeGenderDysphoria()">Submit</button>
+                            <p id="gender-dysphoria-result"></p>
+                        </div>
+            
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

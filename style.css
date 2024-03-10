@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header
+{
+    height:100vh;
+    width:100%;
+    background-color:#756AB6;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.container {
+    height: 85vh;
+    width: 85%;
+    background-color: #7360DF;
+    display: flex;
+    justify-content: center;
+    background: url("4303090.jpg") center/cover no-repeat; /* Center and cover the background */
+}
+
+.navbar
+{
+    height:45px;
+    width:100%;
+    background-color:#FFE5E5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.navbar h2{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    font-size:2em;
+    font-weight:400;
+}
+
+.navbar ul{
+    display:flex;
+}
+
+.navbar li{
+    margin:0 10px;
+}
+
+.navbar a{
+    color:Black;
+    text-decoration:none;
+    transition:color 0.3s ease;
+    margin:20px;
+    font-size:1.75em;
+}
